@@ -1,33 +1,42 @@
-import styled from "styled-components";
 import { Container } from "styles/globalStyles";
 import teamImg1 from "public/images/team-img-1.png";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const Wrapper = styled.div`
-  padding: 150px 0;
-  background: #f8f7f7;
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
-  .section {
-    display: flex;
-    align-items: center;
-    gap: 64px;
-  }
-`;
-const SectionLeft = styled.div`
-  min-width: 212px;
+// import Swiper core and required modules
+import SwiperCore, { Pagination } from "swiper";
+import { SectionLeft, SectionRight, Wrapper } from "./Team.styles";
 
-  img {
-    width: 100%;
-  }
-`;
-const SectionRight = styled.div``;
+// install Swiper modules
+SwiperCore.use([Pagination]);
 
 function Team() {
   return (
     <Wrapper>
       <Container className="section">
         <SectionLeft>
-          <Image src={teamImg1} alt="" />
+          <Swiper
+            pagination={{
+              clickable: true,
+            }}
+            slidesPerView={1}
+            grabCursor={true}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <Image src={teamImg1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={teamImg1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={teamImg1} alt="" />
+            </SwiperSlide>
+          </Swiper>
         </SectionLeft>
         <SectionRight>
           <p className="fs-20px gray weight-4 mb-15px">

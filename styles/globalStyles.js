@@ -66,6 +66,9 @@ const GlobalStyle = createGlobalStyle`
     .light-purple{
       color : #763D8E;
     }
+    .bg-purple{
+      background:#4a114a ;
+    }
 
     /* font-weights */
     .weight-9 {
@@ -164,6 +167,16 @@ export const Container = styled.div`
   max-width: 1700px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+`;
+
+export const PageContainer = styled.div`
+  @media (max-width: 500px) {
+    padding-bottom: 60px;
+  }
 `;
 
 export default GlobalStyle;

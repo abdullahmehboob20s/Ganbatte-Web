@@ -7,10 +7,21 @@ const Wrapper = styled.div`
 
   display: flex;
   align-items: center;
+
+  @media (max-width: 500px) {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 `;
 
 const ContentWrapper = styled.div`
   max-width: 503.57px;
+  width: 100%;
+
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 
   button {
     padding: 1rem 2rem;

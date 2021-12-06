@@ -4,11 +4,19 @@ import { Container } from "styles/globalStyles";
 const Wrapper = styled.div`
   padding: 100px 0;
   background: #f8f7f7;
+
+  @media (max-width: 760px) {
+    padding: 50px 0;
+  }
 `;
 const TrustCards = styled.div`
   display: flex;
   flex-direction: column;
   gap: 62px;
+
+  @media (max-width: 760px) {
+    gap: 42px;
+  }
 `;
 const TrustCard = styled.div`
   display: flex;
@@ -28,7 +36,7 @@ function Trust() {
   return (
     <Wrapper>
       <Container>
-        <p className="fs-36px weight-4 gray mb-50px">Why trust us?</p>
+        <p className="fs-36px weight-4 gray mb-40px">Why trust us?</p>
 
         <TrustCards>
           <TrustCard>

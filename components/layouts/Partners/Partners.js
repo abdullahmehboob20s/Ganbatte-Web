@@ -15,6 +15,10 @@ import Image from "next/image";
 
 const Wrapper = styled.div`
   padding: 100px 0;
+
+  @media (max-width: 760px) {
+    padding: 40px 0;
+  }
 `;
 const PartnersImages = styled.div`
   display: flex;

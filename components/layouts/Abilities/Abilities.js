@@ -7,6 +7,10 @@ import Image from "next/image";
 
 const ContainerWrapper = styled.div`
   padding: 100px 0;
+
+  @media (max-width: 500px) {
+    padding: 50px 0;
+  }
 `;
 const Section = styled.div`
   display: flex;
@@ -17,13 +21,29 @@ const Section = styled.div`
 
   flex-direction: ${(props) =>
     props.reverse === "true" ? "row-reverse" : "row"};
+
+  @media (max-width: 950px) {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    gap: 1.5rem;
+    margin-bottom: 50px;
+  }
 `;
 const SectionRight = styled.div`
   flex: 1;
   max-width: 438px;
+
+  @media (max-width: 950px) {
+    max-width: 100%;
+  }
 `;
 const SectionImage = styled.div`
   min-width: 500px;
+
+  @media (max-width: 1200px) {
+    min-width: auto;
+  }
 `;
 const SectionTitle = styled.div`
   position: relative;
@@ -38,6 +58,10 @@ const SectionTitle = styled.div`
     height: 18.9px;
     background-color: ${(props) => props.circleColor};
     border-radius: 50%;
+
+    @media (max-width: 950px) {
+      display: none;
+    }
   }
 `;
 

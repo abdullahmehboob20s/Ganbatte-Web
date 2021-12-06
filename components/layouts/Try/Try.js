@@ -17,10 +17,24 @@ const Content = styled.div`
   border-radius: 10px;
   padding: 2rem;
 
+  @media (max-width: 760px) {
+    max-width: 100%;
+    text-align: center;
+
+    > p {
+      margin-bottom: 1.5rem;
+    }
+  }
+
   & > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 760px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 
     & button {
       background-color: rgba(210, 55, 50, 1);

@@ -6,8 +6,8 @@ const Wrapper = styled.div`
   margin-bottom: 150px;
 `;
 const TutorialRoadmap = styled.div`
-  & > div:not(:last-child) {
-    min-height: 80px;
+  & > div {
+    /* min-height: 80px; */
 
     & .line {
       content: "";
@@ -33,7 +33,11 @@ const TutorialRoadmap = styled.div`
 const TutorialCard = styled.div`
   position: relative;
 
-  /* border: 2px solid red; */
+  padding-bottom: 2rem;
+
+  &:last-child {
+    padding-bottom: 0rem;
+  }
 
   & > div {
     display: flex;
